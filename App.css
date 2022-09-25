@@ -1,0 +1,114 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: rgb(248, 193, 236);
+    overflow: hidden;
+}
+
+.rectangles{
+    position: relative;
+    display: flex;
+}
+
+.rectangles span{
+    width: 7vw;
+    height: 50vh;
+    margin: 0px 20px;
+    background-color: purple;
+    animation: coach 1.5s linear infinite;
+}
+
+@keyframes coach{
+    0%{
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transform: translate(-50px) scale(1);
+    }
+
+    50%{
+        box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+        opacity: 1;
+        transform: translate(0px) scale(1.2);
+    }
+    
+
+    100%{
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transform: translate(50px) scale(1);
+    }
+}
+
+.rectangles span:nth-child(1){
+    animation-delay: 0s;   
+}
+.rectangles span:nth-child(2){
+    animation-delay: 0.2s;   
+}
+.rectangles span:nth-child(3){
+    animation-delay: 0.4s;   
+}
+.rectangles span:nth-child(4){
+    animation-delay: 0.6s;   
+}
+.rectangles span:nth-child(5){
+    animation-delay: 0.8s;   
+}
+.rectangles span:nth-child(6){
+    animation-delay: 1.0s;   
+}
+.rectangles span:nth-child(7){
+    animation-delay: 1.2s;   
+}
+
+.myname{
+    position: absolute;
+    top: 2vh;
+    left: -15vw;
+    font-size: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-weight: 700;
+    color: black;
+    animation: myname 5s linear infinite 0s alternate;
+}
+
+.myname2{
+    position: absolute;
+    bottom: 2vh;
+    right: -15vw;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: black;
+    animation: myname2 5s linear infinite 0s alternate;
+}
+
+@keyframes myname{
+    0%{
+        transform: translate(0vw);
+    }
+    
+
+    100%{
+        transform: translate(119vw);
+    }
+}
+
+@keyframes myname2{
+    0%{
+        transform: translate(0vw);
+    }
+    
+
+    100%{
+        transform: translate(-119vw);
+    }
+}
